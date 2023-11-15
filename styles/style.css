@@ -10,7 +10,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: black;
+  background-color: rgb(74, 205, 238);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -33,6 +33,7 @@ body {
 
 .message {
   padding: 1rem;
+  color: #fff;
 }
 
 .message h2 {
@@ -51,7 +52,7 @@ body {
   font-size: .9rem;
   margin-top: 2rem;
   transition: all .3s ease-in;
-  color: #fff;
+  color: #000000;
 }
 
 .message button:hover {
@@ -64,6 +65,7 @@ body {
   margin: 2rem;
   background-color: aqua;
   text-align: center;
+  color: #000000;
 }
 
 .create-account {
@@ -112,7 +114,7 @@ body {
   outline: none;
   padding: .2rem 0;
   font-size: .9rem;
-  color: white;
+  color: rgb(0, 0, 0);
 }
 
 .formulario input[type="button"] {

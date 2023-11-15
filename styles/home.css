@@ -14,135 +14,155 @@ body {
   background: linear-gradient(45deg, rgb(57, 10, 177), #ea0cea);
 }
 
+.header_container {
+  width: 100%;
+  display: flex;
+  padding-top: 5%;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  padding-inline: 5%;
+  
+}
+
 .logo {
   position:static;
-  width: 100%;
+  width: 15%;
   padding-top: 2%;
-  display: flex;
-  align-items: center;
+  left: 0%;
+  align-items: left;
   
 }
 
 .logo img {
-  width: 10%;
+  width: 100%;
   transition: 1s;
-  
   
 }
 
 .logo img:hover {
-  width: 12%;
+  width: 120%;
   box-shadow: 0 0 50px #fff;
   border-radius: 100%;
   transition: 2s;
 }
 
-.logo h1{
-  margin-left: 5%;
-  color: #fff;
-  font-size: 700%;
-  transition: 1s;
-}
-.logo h1:hover{
-  margin-left: 5%;
-  color: #fff;
-  font-size: 700%;
-  overflow: hidden;
-  text-shadow: 0px 0px 10px#fff;
-  user-select: none;
-
-}
-
-.header_container {
-  width: 100%;
-  height: 20%;
-  display: flex;
-  padding-top: 5%;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
-  gap: 10px;
-}
-
-.header_container .header_pesquisa {
-  width: 100%;
-  height: 40px;
+.header_container .barra_pesquisa {
+  width: 65%;
+  height: 60px;
+  border: 0px solid #350574;
+  border-radius: 10px;
+  box-sizing: border-box;
   transition: .5s;
-  padding: 0px 15px;
+  background-color: #fff;
+
 }
 
-.header_container .header_pesquisa button {
-  width: 15%;
-  max-width: 40%;
+.header_container .barra_pesquisa input[type="text"] {
+  width: 100%;
+  height: 100%;
+  border: 0px solid #350574;
+  border-radius: 10px;
+  box-sizing: border-box;
+  transition: .5s;
+
+}
+
+.header_container .barra_pesquisa input[type="text"]:focus,
+.header_container .barra_pesquisa input[type="text"]:hover {
+  width: 102%;
+
+}
+
+.header_container .barra_pesquisa input[type="text"]::placeholder {
+  padding-left: 10px;
+}
+
+.header_container .bt_pesquisa{
+  width: 10%;
+  height: 60px;
+
+}
+
+.header_container .bt_pesquisa button {
+  width: 100%;
   height: 100%;
   border: 0px;
-  border-radius: 25px;
+  border-radius: 15px;
   transition: .5s;
   cursor: pointer;
 }
 
-.header_container .header_pesquisa button:hover,
-.header_container .header_pesquisa button:focus {
-  width: 17%;
+.header_container button:hover,
+.header_container button:focus {
+  width: 100%;
   border-radius: 25px;
   transition: .5s;
   cursor: pointer;
   box-shadow: 0px 35px 80px #0000003e;
 }
 
-.header_container .header_pesquisa input[type="text"] {
-  width: 78%;
-  height: 100%;
-  border: 0px solid #350574;
-  border-radius: 25px;
-  box-sizing: border-box;
-  transition: .5s;
-  margin-right: 2%;
-}
 
-.header_container .header_pesquisa input[type="text"]:focus {
-  width: 80%;
-  height: 102%;
-  padding: 0 10px;
-}
 
-.header_container .header_pesquisa input[type="text"]::placeholder {
-  padding-left: 5px;
-}
-
-.header_container .header_menu {
+.menu_container{
   width: 100%;
-  height: 50px;
-  overflow: hidden;
-  padding-inline: 1%;
-  padding-top: 0.5%;
-  background-color: transparent;
   display: flex;
+  padding-top: 5%; 
+  align-items:center;
+  justify-content: center;
+}
+
+.menu_container .header_menu {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  padding-inline: 0%;
+  background-color: transparent;
+  display:inline-block;
   align-items: center;
   text-align: center;
+
 }
 
-.header_container .header_menu a {
+.menu_container .header_menu a {
   display: inline-block;
-  width: 100%;
-  height: 100%;
+  width: 100px;
+  height: 100px;
   color: rgb(255, 255, 255);
-  background-color: rgba(2, 46, 87, 0.432);
+  background-color: rgb(192, 74, 222);
   text-align: center;
-  padding-top: 1%;
+  line-height: 100px;
   text-decoration: none;
   font-family: 'Roboto', sans-serif;
   margin-right: 5%;
-  border-radius: 25px;
+  border-radius: 50%;
   transition: .5s;
 }
 
-.header_container .header_menu a:hover,
-.header_container .header_menu a:focus {
-  width: 110%;
+.menu_container .header_menu a:hover,
+.menu_container .header_menu a:focus {
+  width: 110px;
+  height: 110px;
   background-color: rgb(199, 85, 189);
-  color: black;
-  box-shadow: 20px 35px 80px #0000004b;
+  color: rgb(255, 255, 255);
+  text-shadow: 0 0 10px #ffffff ;
+  box-shadow: 0px 0px 80px #6161614b;
+
+}
+
+.separador {
+  width: 100%; /* Largura total */
+  height: 2px; /* Altura da linha */
+  margin-top: 2%;
+  background-color: #ccc; /* Cor da linha */
+  margin-bottom: 20px; /* Espaçamento entre as divs */
+}
+
+.separador_horizontal {
+  width: 2px; /* Largura total */
+  height: 100%; /* Altura da linha */
+  background-color: #ccc; /* Cor da linha */
 }
 
 .container {

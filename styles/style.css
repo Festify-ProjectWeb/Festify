@@ -109,7 +109,7 @@ body {
   margin-bottom: 2rem;
   background-color: transparent;
   border: none;
-  border-bottom: white thin solid;
+  border-bottom: rgb(18, 10, 66) thin solid;
   text-align: center;
   outline: none;
   padding: .2rem 0;

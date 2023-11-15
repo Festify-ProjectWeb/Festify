@@ -1,7 +1,9 @@
  body {
+     background-image: url("../images/backg1.jpg");
+     background-position: 0% 55%;
+     background-size: cover;
      margin: 0;
      padding: 0;
-     background:black;
      display: flex;
      align-items: center;
      justify-content: center;
@@ -11,8 +13,8 @@
 
  form {
      background-color: aqua;
-     padding: 20px;
-     border-radius: 8px;
+     padding: 30px;
+     border-radius: 18px;
      
  }
 
@@ -38,8 +40,11 @@
  }
 
  .logo {
-     max-width: 100%;
-     height: auto;
+       
+     width: 200px;
+     padding: 122px;
+     border-radius: 110px;
+    
  }
  @media (max-width: 600px) {
     form {

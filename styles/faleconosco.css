@@ -12,7 +12,7 @@
  }
 
  form {
-     background-color: aqua;
+     background-color: rgba(0, 255, 255, 0.536);
      padding: 30px;
      border-radius: 18px;
      
@@ -32,13 +32,18 @@
      border: 1px solid #ccc;
      border-radius: 4px;
  }
+ textarea {
+    resize: none;
+}
 
  input[type="submit"] {
      background-color: #4caf50;
      color: #fff;
      cursor: pointer;
  }
-
+ .body .h1{
+    background: linear-gradient(45deg #864caf #af4caf);
+ }
  .logo {
        
      width: 200px;

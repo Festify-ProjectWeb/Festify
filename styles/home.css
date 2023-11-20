@@ -11,7 +11,7 @@ body {
   align-items: center;
   flex-direction: column;
   justify-content: center;
-  background: linear-gradient(45deg, rgb(57, 10, 177), #ea0cea);
+  background: linear-gradient(45deg, rgb(255, 255, 255)rgb(189, 189, 189));
 }
 
 .header_container {
@@ -66,6 +66,7 @@ body {
   border-radius: 10px;
   box-sizing: border-box;
   transition: .5s;
+  border: 1px solid #ccc;
 
 }
 
@@ -100,7 +101,7 @@ body {
   border-radius: 25px;
   transition: .5s;
   cursor: pointer;
-  box-shadow: 0px 35px 80px #0000003e;
+  box-shadow: 0px 35px 80px #0000001a;
 }
 
 
@@ -130,7 +131,7 @@ body {
   width: 100px;
   height: 100px;
   color: rgb(255, 255, 255);
-  background-color: rgb(192, 74, 222);
+  background-color: rgba(124, 64, 139, 0.534);
   text-align: center;
   line-height: 100px;
   text-decoration: none;
@@ -261,7 +262,7 @@ body .footer {
   width: 100%;
   text-align: center;
   padding: 20px 0;
-  background-color: #8605ad;
+  background-color: #8605ad77;
   color: #fff;
   text-decoration: none;
 }

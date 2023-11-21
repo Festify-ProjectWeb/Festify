@@ -1,0 +1,232 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+  }
+
+.logo{
+position: fixed;
+width: 5%;
+top: 5%;
+left: 3%;
+overflow: hidden;
+z-index: 1000;
+}
+
+.logo img{
+width: 100%;
+}
+
+.header {
+position:absolute;
+top: 2%;
+overflow: hidden;
+background-color: transparent;
+z-index: 1000;
+display: flex;
+align-items: center;
+
+}
+
+.header a {
+display:inline-block;  /* Em vez de float para evitar problemas de layout */
+color: rgb(255, 255, 255);
+background-color: rgba(2, 46, 87, 0.432);
+text-align: center;
+padding: 14px 16px;
+text-decoration: none;
+font-family: 'Roboto', sans-serif;
+margin-right: 10px;
+border-radius: 25px;
+
+}
+
+.header a:hover {
+background-color: rgb(199, 85, 189);
+color: black;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(45deg, #350574, #bb27bb);
+  }
+
+.container-geral {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-around;
+
+}
+
+
+.container-login, .container-cadastro {
+  width: 90%;
+  height: 90vh;
+  display: flex;
+  justify-content: space-around;
+  position: relative;
+  opacity: 1;
+
+}
+
+.welcome-login, .welcome-register{
+  display: flex;
+  align-items: center;
+  text-align: center;
+  transition: 3s ;
+}
+
+.welcome-login-hidden, .welcome-register-hidden{
+  opacity: 0;
+  transition: .2s ;
+}
+
+.message {
+padding: 1rem;
+color: #fff;
+}
+
+.message h2 {
+font-size: 1.7rem;
+padding: 1rem 0;
+}
+
+.message button {
+padding: 1rem;
+font-weight: 400;
+background-color: rgb(140, 0, 255);
+border-radius: 2rem;
+border: none;
+outline: none;
+cursor: pointer;
+font-size: .9rem;
+margin-top: 2rem;
+color: #ffffff;
+}
+
+.message button:hover {
+background-color: rgb(140, 0, 255);
+}
+
+.formulario-login, .formulario-registro {
+  width: 400px;
+  height: 100%;
+  padding: 0rem;
+  margin: 2rem;
+  background-color: rgba(140, 27, 233, 0.664);
+  text-align: center;
+  color: #ffffff;
+  position: relative; /* Alterado para posição absoluta */
+  top: 50%; /* Posicionado no meio verticalmente */
+  left: 50%; /* Posicionado no meio horizontalmente */
+  transform: translate(-50%, -50%); /* Corrige a posição no centro */
+  display: none; /* Inicialmente oculto */
+  z-index: 1; /* Garante que fique acima dos outros elementos */
+
+}
+
+.formulario-login input {
+  width: 70%;
+  display: block;
+  margin: auto;
+  margin-bottom: 2rem;
+  background-color: transparent;
+  border: none;
+  border-bottom: rgb(255, 255, 255) thin solid;
+  text-align: center;
+  outline: none;
+  padding: .2rem 0;
+  font-size: .9rem;
+  color: rgb(255, 255, 255);
+  }
+
+.formulario-login input[type="submit"] {
+  width: 60%;
+  margin: auto;
+  border: solid thin rgb(0, 0, 0);
+  padding: .7rem;
+  border-radius: 2rem;
+  background-color: rgb(0, 0, 0);
+  font-weight: 600;
+  margin-top: 3rem;
+  font-size: .8rem;
+  cursor: pointer;
+  color: #ffffff;
+  }
+
+    
+.formulario-registro input {
+  width: 70%;
+  display: block;
+  margin: auto;
+  margin-bottom: 2rem;
+  background-color: transparent;
+  border: none;
+  border-bottom: rgb(255, 255, 255) thin solid;
+  text-align: center;
+  outline: none;
+  padding: .2rem 0;
+  font-size: .9rem;
+  color: rgb(255, 255, 255);
+  }
+  
+.formulario-registro input[type="submit"] {
+  width: 60%;
+  margin: auto;
+  border: solid thin rgb(0, 0, 0);
+  padding: .7rem;
+  border-radius: 2rem;
+  background-color: rgb(0, 0, 0);
+  font-weight: 600;
+  margin-top: 3rem;
+  font-size: .8rem;
+  cursor: pointer;
+  color: #ffffff;
+  }
+
+.titulo_form {
+padding: 2.7rem 0;
+font-size: 1.7rem;
+}
+
+.iconos {
+width: 200px;
+display: flex;
+justify-content: space-around;
+margin: auto;
+}
+
+.border-icon {
+height: 20px;
+width: 20px;
+display: flex;
+align-items: center;
+justify-content: center;
+padding: 1.5rem;
+border: solid thin white;
+border-radius: 50%;
+font-size: 1.5rem;
+}
+
+.border-icon:hover {
+background-color: rgb(140, 0, 255);
+cursor: pointer;
+}
+
+.subtitulo_form {
+  font-size: 15px;
+  padding: 2rem 0;
+}
+
+.transitioning .container-login,
+.transitioning .container-cadastro,
+.transitioning .welcome-login,
+.transitioning .welcome-register {
+    transition: none;
+}
+

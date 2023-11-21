@@ -3,38 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Fale Conosco</title>
     <link rel="stylesheet" href="styles/faleconosco.css">
+    <title>Fale Conosco</title>
 </head>
-<header class="logo">
-    <h1><img src="images/png-FESTIFY.png" width="200"></h1>
-</header> 
 
-<?php
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    // Receber dados do formulário
-    $nome = $_POST['nome'];
-    $email = $_POST['email'];
-    $motivo = $_POST['motivo'];
-    $mensagem = $_POST['mensagem'];
+<header class="logo_faleconosco">
+    <h1><img src="images/png-FESTIFY.png" width="300"></h1>
+</header>
 
-    // Envio de email
-    $destinatario = "seu_email@example.com";
-    $assunto = "Contato do Formulário Fale Conosco";
-    $corpo_email = "Nome: $nome\n";
-    $corpo_email .= "E-mail: $email\n";
-    $corpo_email .= "Motivo de Contato: $motivo\n";
-    $corpo_email .= "Mensagem: $mensagem\n";
+<body>    
 
-    mail($destinatario, $assunto, $corpo_email);
+    <div class="header">
+        <a href="/_Festify/index.html">Home</a>
+        <a href="#eventos">Eventos</a>
+        <a href="#localização">Localização</a>
+    </div>
 
-    //Devemos criar uma pagina de confirmação
-    header("Location: obrigado.php");
-    exit();
-}
-?>
-
-<body>   
     <form action="#" method="post">
         <label for="nome">Nome:</label>
         <input type="text" id="nome" name="nome" required>

@@ -7,13 +7,13 @@ require_once('config.php');
 require_once('database.php');
 
 if (isset($_SESSION['auth_response']) && $_SESSION['auth_response']['sucess'] === true) {
-    $user = $_SESSION['auth_response'];
+    $user = $_SESSION['auth_response']['id'];
 
     $db = Database::getInstance();
 
     $conn = $db->getConnection();
 
-    $query = "SELECT evento_nome FROM tb_eventos";
+    $query = "SELECT * FROM tb_eventos WHERE tb_eventos.user_ID = $user";
 
     $result = $conn->query($query);
 
@@ -22,9 +22,12 @@ if (isset($_SESSION['auth_response']) && $_SESSION['auth_response']['sucess'] ==
     if ($result->num_rows > 0) {
         while ($row = $result->fetch_assoc()) {
             $titulos[] = $row['evento_nome'];
+            $imgs[] = base64_encode($row['evento_img']);
+            $descs[] = $row['evento_desc'];
         }
     }else {
-        $titulo = "Nenhum evento encontrado";
+        $titulos[] = "Nenhum evento encontrado";
+        $descs[] = "";
     }
 
     $conn -> close();
@@ -62,8 +65,7 @@ if (isset($_SESSION['auth_response']) && $_SESSION['auth_response']['sucess'] ==
             <div class="menu_container">
                 <div class="header_menu">
                     <a href="index.php">Home</a>
-                    <a href="#eventos">Eventos</a>
-                    <a href="#localização">Localização</a>
+                    <a href="eventos.php">Meus Eventos</a>
                     <a href="login.php" class="right">Cadastre-se</a>
                     <a href="login.php" class="right">Login</a>
                 </div>
@@ -72,20 +74,18 @@ if (isset($_SESSION['auth_response']) && $_SESSION['auth_response']['sucess'] ==
         </header>
         <div class="separador"></div>
         <div class="container">
-            <?php foreach ($titulos as $titulo) : ?>
+            <?php for($i = 0; $i < count($titulos); $i++) : ?>
                 <div class="card" style="--cor:#009688;">
                     <div class="cardImg">
-                        <img src="images/background_test.jpg" alt="Banner 1">
+                        <img src="data:image/jpeg;base64,<?php echo $imgs[$i]; ?>" alt="Banner 1">
                     </div>
                     <div class="conteudo">
-                        <h2><?php echo $titulo; ?></h2>
-                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-                            Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
-                            when an unknown printer took a galley</p>
+                        <h2><?php echo $titulos[$i]; ?></h2>
+                        <p><?php echo $descs[$i];?></p>
                         <a href="#">CONFIRA</a>
                     </div>
                 </div>
-            <?php endforeach; ?>
+            <?php endfor; ?>
 
         </div>
         <div class="separador"></div>

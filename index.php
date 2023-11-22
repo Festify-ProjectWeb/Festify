@@ -14,10 +14,12 @@ $result = $conn->query($query);
 
 $titulos = array();
 $descs = array();
+$imgs = array();
 
 if ($result->num_rows > 0) {
     while ($row = $result->fetch_assoc()) {
         $titulos[] = $row['evento_nome'];
+        $imgs[] = base64_encode($row['evento_img']);
         $descs[] = $row['evento_desc'];
     }
 }else {
@@ -57,8 +59,7 @@ $conn -> close();
             <div class="menu_container">
                 <div class="header_menu">
                     <a href="index.php">Home</a>
-                    <a href="eventos.php">Eventos</a>
-                    <a href="#localização">Localização</a>
+                    <a href="eventos.php">Meus Eventos</a>
                     <a href="login.php" class="right">Cadastre-se</a>
                     <a href="login.php" class="right">Login</a>
                 </div>
@@ -70,7 +71,7 @@ $conn -> close();
             <?php for($i = 0; $i < count($titulos); $i++) : ?>
                 <div class="card" style="--cor:#009688;">
                     <div class="cardImg">
-                        <img src="images/background_test.jpg" alt="Banner 1">
+                        <img src="data:image/jpeg;base64,<?php echo $imgs[$i]; ?>" alt="Banner 1">
                     </div>
                     <div class="conteudo">
                         <h2><?php echo $titulos[$i]; ?></h2>

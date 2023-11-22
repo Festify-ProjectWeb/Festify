@@ -16,10 +16,10 @@ $result = $conn->query($query);
 if ($result->num_rows > 0) {
 
     $row = $result->fetch_assoc();  
-    $response = array('sucess' => true, 'id' => $row['user_ID'], 'message' => "Autenticação bem-sucedida!" );
+    $response = array('success' => true, 'id' => $row['user_ID'], 'message' => "Autenticação bem-sucedida!" );
 
 } else {
-    $response = array('sucess' => false, 'id' => null, 'message'=> "Usuário não encontrado <br>ou senha incorreta." );
+    $response = array('success' => false, 'id' => null, 'message'=> "Usuário não encontrado <br>ou senha incorreta." );
 }
 
 $conn -> close();

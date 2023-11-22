@@ -2,17 +2,23 @@
 
 session_start();
 
-if (isset($_SESSION['auth_response']) && $_SESSION['auth_response']['sucess'] === false) {
+if (isset($_SESSION['auth_response']) && $_SESSION['auth_response']['success'] === false) {
     $check_login = $_SESSION['auth_response']['message'];
     unset($_SESSION['auth_response']);
 }
-else{$check_login = "Insira seu login e senha:";}
-
+else{
+    if (isset($_SESSION['auth_response']['register']) === true){
+        $check_login = $_SESSION['auth_response']['register'];
+    }else{
+        $check_login = "Insira seu login e senha:";
+    }
+}
+    
 
 ?>
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 
 <head>
     <meta charset="UTF-8">
@@ -49,7 +55,7 @@ else{$check_login = "Insira seu login e senha:";}
                         <i class='bx bxl-facebook-circle' ></i>
                     </div>
                 </div>
-                <p class="subtitulo_form"> <?php echo $check_login?> </p>
+                <p class="subtitulo_form"> <?php echo $check_login ?> </p>
                 <input type="email" name="email" id="emailInput" placeholder="Email">
                 <input type="password" name="senha" id="senhaInput" placeholder="Senha">
                 <input type="submit" value="Iniciar sessão">
@@ -65,7 +71,7 @@ else{$check_login = "Insira seu login e senha:";}
 
         <div class="container-cadastro">
             
-            <form id="registerForm" class="formulario-registro">
+            <form id="registerForm" class="formulario-registro" action="register.php" method="post">
                 <h2 class="titulo_form">Criar uma conta</h2>
                 <div class="iconos">
                     <div class="border-icon">
@@ -79,10 +85,10 @@ else{$check_login = "Insira seu login e senha:";}
                     </div>
                 </div>
                 <p class="subtitulo_form">Ainda não tem conta?</p>
-                <p class="subtitulo_form">Insira seus dados abaixo:</p>
-                <input type="text" placeholder="Nome">
-                <input type="email" placeholder="Email">
-                <input type="password" placeholder="senha">
+                <p class="subtitulo_form"><?php echo $check_login ?></p>
+                <input type="text" name="nome" placeholder="Nome">
+                <input type="email" name="email" id="emailInput" placeholder="Email">
+                <input type="password" name="senha" id="senhaInput" placeholder="Senha">
                 <input type="submit" value="Registrar-se">
             </form>
             <div id="w_reg" class="welcome-register">

@@ -1,3 +1,10 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+  }
+
 body {
     margin: 0;
     padding: 0;
@@ -16,12 +23,26 @@ body {
 }
 
 header {
+    padding-top: 5%;
     text-align: center;
     margin-bottom: 20px;
+    transform: scale(1.02);
+   
+    
+}
+
+a {
+    text-decoration: none;
+    color: rgba(16, 52, 197, 0.644);
+    margin: 10%;
+    margin-bottom: 10px;
+    
+    border-radius: 50px;
+
 }
 
 header img {
-    padding-top: 20%;
+    padding-top: 50%;
     width: 100px;
     height: auto;
 }
@@ -59,7 +80,7 @@ input, textarea, select {
 }
 
 input[type="submit"] {
-    background-color: #4caf50;
+    background-color: #874caf;
     color: white;
     cursor: pointer;
     border: none; 

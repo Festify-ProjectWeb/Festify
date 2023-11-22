@@ -11,15 +11,27 @@ body {
 }
 
 form {
-    display:block;
-    position:fixed;
-    left:20%;
-    background-color: rgb(43, 116, 226);
-    padding: 20px;
-    border-radius: 8px;
-    text-align: center;
-     
+  display:block;
+  position:fixed;
+  left:20%;
+  background-color: rgb(43, 116, 226);
+  padding: 16px;
+  line-height: 1.6;
+  border-radius: 20px;
+  text-align: center;
+   
 }
+
+form:hover {
+  transform: scale(1.02); 
+}
+
+textarea {
+  padding: 14px 26px;
+  resize: none;
+
+}
+
 
 label {
      display:block;
@@ -39,8 +51,9 @@ input,select {
 input[type="submit"] {
     background-color: rgb(19, 1, 48);
     color: #fff;
+    padding: 14px 16px;
     cursor: pointer;
-    margin-bottom: 16px;
+    margin-bottom: 20px;
     box-sizing: border-box;
     border: 1px solid #ccc;
     border-radius: 4px;
@@ -55,20 +68,22 @@ input[type="submit"] {
 }
 
 .header {
-    position:fixed;
+    position:absolute;
     overflow: hidden;
     top:0%;
     width: 100%;
-    background-color: aqua;
     z-index: 1000;
     display: flex;
+    padding: 14px 16px;
     align-items: center;
+    justify-content: center;
   }
   
   .header a {
-    display:inline-block;  /* Em vez de float para evitar problemas de layout */
+    display:inline-block;
     color: rgb(0, 0, 0);
-    background-color: rgb(9, 216, 216);
+    background-color: rgb(43, 116, 226);
+    border-radius: 30%;
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
@@ -77,11 +92,11 @@ input[type="submit"] {
     
   }
   
-  
-  .header a:hover {
-    background-color: rgb(199, 85, 189);
+    .header a:hover {
+    background-color: rgba(199, 85, 189, 0.705);
     color: black;
   }
+
 
 
 

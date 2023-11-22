@@ -76,7 +76,6 @@ $conn -> close();
                     <div class="conteudo">
                         <h2><?php echo $titulos[$i]; ?></h2>
                         <p><?php echo $descs[$i];?></p>
-                        <a href="#">CONFIRA</a>
                     </div>
                 </div>
             <?php endfor; ?>
@@ -84,9 +83,8 @@ $conn -> close();
         </div>
         <div class="separador"></div>
         <footer class="footer">
-            <a href="#quemsomos">Quem somos</a> |
+            <a href="quemsomos.html">Quem somos</a> |
             <a href="faleconosco.html">Fale conosco</a> |
-            <a href="#feedback">Feedback do usuário</a>
             <p>Copyright &copy; 2023</p>
         </footer>
     </body>

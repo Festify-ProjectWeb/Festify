@@ -6,7 +6,7 @@ session_start();
 require_once('config.php');
 require_once('database.php');
 
-if (isset($_SESSION['auth_response']) && $_SESSION['auth_response']['sucess'] === true) {
+if (isset($_SESSION['auth_response']) && $_SESSION['auth_response']['success'] === true) {
     $user = $_SESSION['auth_response']['id'];
 
     $db = Database::getInstance();
@@ -65,9 +65,8 @@ if (isset($_SESSION['auth_response']) && $_SESSION['auth_response']['sucess'] ==
             <div class="menu_container">
                 <div class="header_menu">
                     <a href="index.php">Home</a>
-                    <a href="eventos.php">Meus Eventos</a>
-                    <a href="login.php" class="right">Cadastre-se</a>
-                    <a href="login.php" class="right">Login</a>
+                    <a href="eventocadastro.php" class="right">Cadastrar-Eventos</a>
+                    <a href="index.php" class="right">Sair</a>
                 </div>
             </div>
             
@@ -82,7 +81,6 @@ if (isset($_SESSION['auth_response']) && $_SESSION['auth_response']['sucess'] ==
                     <div class="conteudo">
                         <h2><?php echo $titulos[$i]; ?></h2>
                         <p><?php echo $descs[$i];?></p>
-                        <a href="#">CONFIRA</a>
                     </div>
                 </div>
             <?php endfor; ?>
@@ -90,9 +88,8 @@ if (isset($_SESSION['auth_response']) && $_SESSION['auth_response']['sucess'] ==
         </div>
         <div class="separador"></div>
         <footer class="footer">
-            <a href="#quemsomos">Quem somos</a> |
+            <a href="quemsomos.html">Quem somos</a> |
             <a href="faleconosco.html">Fale conosco</a> |
-            <a href="#feedback">Feedback do usuário</a>
             <p>Copyright &copy; 2023</p>
         </footer>
     </body>

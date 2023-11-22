@@ -35,7 +35,7 @@ session_set_cookie_params(
     true 
 );
 
-if ($response['sucess'] === true){
+if ($response['success'] === true){
     $_SESSION['auth_response'] = $response;
     header('Location: eventos.php');
     exit();

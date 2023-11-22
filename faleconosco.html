@@ -16,10 +16,10 @@
     <div class="header">
         <a href="index.html">Home</a>
         <a href="eventos.html">Eventos</a>
-        <a href="#localização">Localização</a>
     </div>
 
-    <form action="#" method="post">
+    <form id="myForm"action="#" method="post">
+
         <label for="nome">Nome:</label>
         <input type="text" id="nome" name="nome" required>
 
@@ -40,5 +40,20 @@
 
         <input type="submit" value="Enviar">
     </form>
+
+    <script>
+        document.getElementById('myForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            var result = confirm("Tem certeza de que deseja enviar este formulário?");
+            if (result) {
+            
+                alert("Obrigado. Envio realizado com sucesso!");
+            } else {
+            
+                alert("Envio de formulário cancelado.");
+            }
+        });
+    </script>
+
 </body>
 </html>
